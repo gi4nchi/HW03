@@ -21,7 +21,7 @@ while(True):
         if(input==directions(counter)):
             print("Well done")
             counter+=1
-            if(counter==3):
+            if(counter==(len(list)-1)):
                 print("You Win")
                 exit()
         else:
