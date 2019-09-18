@@ -30,6 +30,7 @@ while(True):
             life_counter(errors,lives)
     else:
         print("Not a valid answer")
+        life_counter(errors,lives)
 
 
 
