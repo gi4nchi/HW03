@@ -9,19 +9,17 @@ def life_counter(errors, lives):
     if lives == 3:
         print("You lost")
         exit()
-    return lives, errors
+    return errors, lives
 counter = 0
 errors = 0
 lives = 0
-
 directions=['N','S','E','W']
 random.shuffle(directions)
 #print(directions)# to know the password in advance
 print( end= "Welcome to de magic maze, which way do you want to go? ")
-while(True):
-
-    guess= input("N,S,E,W\n")
-    if (guess=='N' or guess=='S' or guess=='E' or guess=='W'):
+while True:
+    guess= input("N,S,E,W?\n")
+    if guess in directions:
         #print(directions[counter])#try to get what gets from the list each turn
         if(guess==directions[counter]):
             print("Well done")
@@ -32,12 +30,6 @@ while(True):
         else:
             print("Wrong answer")
             errors,lives=life_counter(errors,lives)
-            print(lives)
     else:
         print("Not a valid answer")
         errors,lives=life_counter(errors,lives)
-        print(lives)
-
-
-
-
